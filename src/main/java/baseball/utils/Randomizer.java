@@ -11,10 +11,11 @@ public class Randomizer {
 
         List<Integer> nums = new ArrayList<>();
 
-        int randomNum = getRandomNum(start, end);
-
-        while(nums.size() < 3 && !nums.contains(randomNum)){
-            nums.add(randomNum);
+        while(nums.size() < size){
+            int randomNum = getRandomNum(start, end);
+            if(!nums.contains(randomNum)){
+                nums.add(randomNum);
+            }
         }
 
         return nums;
