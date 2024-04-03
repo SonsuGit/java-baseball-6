@@ -41,4 +41,14 @@ class ParserTest {
         //inputs.add(2);
         assertThrows(IllegalArgumentException.class, () -> parser.parseInput(inputs, 3, 1, 9));
     }
+
+
+    @Test
+    void testStringIntoArrayList() {
+        String testString = "352";
+        ArrayList<Integer> arrayList = parser.stringIntoArrayList(testString);
+
+        assertEquals(testString.length(), arrayList.size());
+        assertDoesNotThrow(() -> parser.parseInput(arrayList, 3, 1, 9));
+    }
 }
