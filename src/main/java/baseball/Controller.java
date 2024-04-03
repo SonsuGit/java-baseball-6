@@ -14,7 +14,7 @@ public class Controller {
         // 기본적인 변수 설정 - ballCount를 0으로 하는 등
 
         // 입력하라는 메시지 출력
-        inputView.requestInput();
+        inputView.printInputRequiredMessage();
 
         // 입력을 받음
 
@@ -26,7 +26,7 @@ public class Controller {
     }
 
     private void askRetry() {
-        inputView.retryMessage();
+        inputView.printRetryMessage();
         // 그 다음 인풋을 받고, 1이면 run(), 2면 종료
     }
 }
