@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Randomizer {
 
-    public static List<Integer> getRandomNumArraylist(int size, int start, int end) {
+    public static ArrayList<Integer> getRandomNumArraylist(int size, int start, int end) {
 
-        List<Integer> nums = new ArrayList<>();
+        ArrayList<Integer> nums = new ArrayList<>();
 
         while(nums.size() < size){
             int randomNum = getRandomNum(start, end);

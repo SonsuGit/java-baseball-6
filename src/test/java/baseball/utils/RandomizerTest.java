@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import static baseball.utils.Randomizer.getRandomNumArraylist;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,7 +19,7 @@ class RandomizerTest {
         int start = 1;
         int end = 9;
 
-        List<Integer> nums = getRandomNumArraylist(size, start, end);
+        ArrayList<Integer> nums = getRandomNumArraylist(size, start, end);
 
         // Check if the size of the list is equal
         assertEquals(size, nums.size());
