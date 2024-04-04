@@ -6,6 +6,12 @@ public class GameNumber {
     int ballCount;
     int strikeCount;
 
+    public GameNumber(int ballCount, int strikeCount, List<Integer> computerNumbers) {
+        this.ballCount = ballCount;
+        this.strikeCount = strikeCount;
+        this.computerNumbers = computerNumbers;
+    }
+
     public int getBallCount() {
         return ballCount;
     }

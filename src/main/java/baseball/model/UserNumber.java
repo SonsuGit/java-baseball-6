@@ -1,17 +1,17 @@
 package baseball.model;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class UserNumber {
-    List<Integer> userNumbers;
+    ArrayList<Integer> userNumbers;
 
     int retryOrExit;
 
-    public List<Integer> getUserNumbers() {
+    public ArrayList<Integer> getUserNumbers() {
         return userNumbers;
     }
 
-    public void setUserNumbers(List<Integer> userNumbers) {
+    public void setUserNumbers(ArrayList<Integer> userNumbers) {
         this.userNumbers = userNumbers;
     }
 
