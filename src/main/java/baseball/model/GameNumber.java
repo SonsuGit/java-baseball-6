@@ -1,12 +1,13 @@
 package baseball.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameNumber {
     int ballCount;
     int strikeCount;
 
-    public GameNumber(int ballCount, int strikeCount, List<Integer> computerNumbers) {
+    public GameNumber(int ballCount, int strikeCount, ArrayList<Integer> computerNumbers) {
         this.ballCount = ballCount;
         this.strikeCount = strikeCount;
         this.computerNumbers = computerNumbers;
@@ -28,13 +29,13 @@ public class GameNumber {
         this.strikeCount = strikeCount;
     }
 
-    public List<Integer> getComputerNumbers() {
+    public ArrayList<Integer> getComputerNumbers() {
         return computerNumbers;
     }
 
-    public void setComputerNumbers(List<Integer> computerNumbers) {
+    public void setComputerNumbers(ArrayList<Integer> computerNumbers) {
         this.computerNumbers = computerNumbers;
     }
 
-    List<Integer> computerNumbers;
+    ArrayList<Integer> computerNumbers;
 }
