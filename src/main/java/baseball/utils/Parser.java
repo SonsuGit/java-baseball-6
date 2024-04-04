@@ -20,9 +20,6 @@ public class Parser {
         // 크기가 맞는지(여기선 3개의 숫자)
         checkSize(inputs, size);
 
-        // 인풋 자체를 숫자로 받았는지(받은걸 숫자로 변환할 예정이라 필요 없을듯)
-        // checkNum(inputs);
-
         // 숫자가 범위에 맞는지(여기선 1~9)
         checkRightNum(inputs, min, max);
     }
