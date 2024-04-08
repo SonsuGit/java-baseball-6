@@ -21,8 +21,8 @@ public class Controller {
     private UserNumber userNumber;
     private Parser parser;
     private GameService gameService;
-    private int ballCount = 0;
-    private int strikeCount = 0;
+    private int ballCount;
+    private int strikeCount;
 
     private void setGame() {
         // 기본적인 변수 설정 - ballCount를 0으로 하는 등
