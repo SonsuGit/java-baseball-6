@@ -31,6 +31,7 @@ public class Controller {
         ArrayList<Integer> computerNumbers = Randomizer.getRandomNumArraylist(3,1,9);
         gameNumber = new GameNumber(ballCount, strikeCount, computerNumbers);
         userNumber = new UserNumber();
+        gameService = new GameService();
     }
 
     private void startGame() {
@@ -57,6 +58,10 @@ public class Controller {
         inputView.printRetryMessage();
 
         //TODO 그 다음 인풋을 받고, 1이면 run(), 2면 종료
+        String userInputString = inputView.getUserInput();
+        if(userInputString == "1"){
+            run();
+        }
 
     }
 }
