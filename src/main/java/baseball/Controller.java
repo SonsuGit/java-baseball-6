@@ -21,15 +21,15 @@ public class Controller {
     private UserNumber userNumber;
     private Parser parser;
     private GameService gameService;
-    private int ballCount;
-    private int strikeCount;
+    private int ballCount = 0;
+    private int strikeCount = 0;
 
     private void setGame() {
         // 기본적인 변수 설정 - ballCount를 0으로 하는 등
         ballCount = 0;
         strikeCount = 0;
-        ArrayList<Integer> computerNumber = Randomizer.getRandomNumArraylist(3,1,9);
-        gameNumber = new GameNumber(ballCount, strikeCount, computerNumber);
+        ArrayList<Integer> computerNumbers = Randomizer.getRandomNumArraylist(3,1,9);
+        gameNumber = new GameNumber(ballCount, strikeCount, computerNumbers);
         userNumber = new UserNumber();
     }
 
@@ -44,7 +44,8 @@ public class Controller {
 
         //TODO 받은 입력이 3스트라이크가 아니면 계속 루프
         if(!gameService.numberChecker(
-                gameNumber.getComputerNumbers(),userNumber.getUserNumbers(),ballCount,strikeCount)
+                gameNumber.getComputerNumbers(),userNumber.getUserNumbers(),
+                ballCount,strikeCount)
         ) startGame();
 
         // 맞으면 끝났다는 메시지 출력
