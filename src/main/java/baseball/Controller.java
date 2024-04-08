@@ -41,25 +41,27 @@ public class Controller {
         // 입력을 받음
         parser = new Parser();
         String userInputString = inputView.getUserInput();
-        userNumber.setUserNumbers(parser.stringIntoArrayList(userInputString));
+        ArrayList<Integer> inputArray = parser.stringIntoArrayList(userInputString);
+        parser.parseInput(inputArray,3,1,9);
+        userNumber.setUserNumbers(inputArray);
 
         //TODO 받은 입력이 3스트라이크가 아니면 계속 루프
         if(!gameService.numberChecker(
                 gameNumber.getComputerNumbers(),userNumber.getUserNumbers(),
                 ballCount,strikeCount)
         ) startGame();
-
-        // 맞으면 끝났다는 메시지 출력
-        outputView.printGameEnd();
-
     }
 
     private void askRetry() {
+
+        // 맞으면 끝났다는 메시지 출력
+        outputView.printGameEnd();
+        // 다시 할거냐고 물어봄
         inputView.printRetryMessage();
 
         //TODO 그 다음 인풋을 받고, 1이면 run(), 2면 종료
         String userInputString = inputView.getUserInput();
-        if(userInputString == "1"){
+        if(userInputString.equals("1")){
             run();
         }
 
