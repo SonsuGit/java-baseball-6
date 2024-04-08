@@ -1,6 +1,8 @@
 package baseball.utils;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Parser {
 
@@ -22,6 +24,9 @@ public class Parser {
 
         // 숫자가 범위에 맞는지(여기선 1~9)
         checkRightNum(inputs, min, max);
+
+        // 입력된 3개의 숫자가 모든 다른 숫자인지
+        checkUniqueNum(inputs);
     }
 
     private void checkSize(ArrayList<Integer> inputs, int size) throws IllegalArgumentException{
@@ -37,6 +42,13 @@ public class Parser {
             if(nums < min || nums > max) {
                 throw new IllegalArgumentException();
             }
+        }
+    }
+
+    private void checkUniqueNum(ArrayList<Integer> inputs) throws IllegalArgumentException{
+        Set<Integer> inputSet = new HashSet<>(inputs);
+        if(inputs.size()!= inputSet.size()){
+            throw new IllegalArgumentException();
         }
     }
 
